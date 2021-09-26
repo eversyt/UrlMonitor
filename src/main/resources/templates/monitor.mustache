@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>URL Monitor</h1>
+
+<div>
+    <form method="post" action="delete">
+        <button type="submit">Delete old checks</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="stop">
+        <button type="submit">Stop all timers</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="refresh">
+        <button type="submit">Refresh the page</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="add">
+        <input type="text" name="name" placeholder="Insert a server name"/>
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+<div>
+    <table align=left border=1>
+        {{#states}}
+            <tr>
+                <th>{{data}}</th>
+                <th>{{host}}</th>
+                <th>{{response}}</th>
+            </tr>
+        {{/states}}
+    </table>
+</div>
+
+
+</body>
+</html>
